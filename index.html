@@ -3,11 +3,16 @@
 <%--<%@ taglib uri="http://java.sun.com/jstl/core" prefix="c" %>--%>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="format-detection" content="telephone=no">
+	<meta name="viewport"
+				content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<meta name="MobileOptimized" content="width" />
+	<meta name="HandheldFriendly" content="true" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-touch-fullscreen" content="yes" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <title>Аудиокниги</title>
   <style>
     @font-face {
@@ -846,15 +851,15 @@
     <div class="heading">
       <p>Приятного прослушивания</p>
     </div>
-    <a class="btn" id="btn" href="#">
+    <button class="btn" id="btn" type="submit" onclick="javascript:frm.ButtonOK.value = 'OK';javascript:frm.resultForm.value = 'OK';javascript:frm.submit();">
       <span>
         Прослушать
       </span>
-    </a>
+    </button>
   </div>
 </div>
 
-<div class="rules" id="footer">
+<div class="rules" id="foot">
   <div class="inner">
 
   </div>
@@ -891,7 +896,7 @@
 <script type="text/javascript">
     //<![CDATA[
     function rsz() {
-        var footer = document['getElementById']('footer');
+        var footer = document['getElementById']('foot');
         var buttonWrap = document['getElementsByClassName']('btn-wrapper')[0];
         footer['style']['bottom'] = "auto";
         footer['style']['top'] = (window['innerHeight'] - footer.offsetHeight) + 'px';
